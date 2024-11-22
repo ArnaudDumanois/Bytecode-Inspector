@@ -54,9 +54,13 @@ Dans le cas des library déployé, la compilation de cette derniere également 2
 - Appel Inter-contrats avec déploiement dynamique  
 
 Si le contrat principal déploie un autre contrat à la volée et interagit avec lui, la chaîne sera dans le bytecode du contrat déployé.
-Et on retrouve la phrase dans les 2 
-
+Et on retrouve la phrase dans les 2. 
 ![alt text](image-7.png)
+
+Cependant nous avons compilé a la volé avec un fichier contenant les 2 contrats, nous allons faire le cas avec un fichier pour chaque contrat. Nous allons simplement diviser en 2 fichiers les contrats dasn `./InterContract`.
+Mais  on retrouve la chaine de caractere dans les 2 bytecodes
+
+![alt text](image-8.png)
 
 - Utilisation d'un constructeur pour initialiser la chaine de caractere
 
