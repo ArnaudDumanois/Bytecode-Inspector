@@ -1,0 +1,286 @@
+    /* "test.sol":60:202  contract HelloWorld {... */
+  mstore(0x40, 0x80)
+  callvalue
+  dup1
+  iszero
+  tag_1
+  jumpi
+  revert(0x00, 0x00)
+tag_1:
+  pop
+  dataSize(sub_0)
+  dup1
+  dataOffset(sub_0)
+  0x00
+  codecopy
+  0x00
+  return
+stop
+
+sub_0: assembly {
+        /* "test.sol":60:202  contract HelloWorld {... */
+      mstore(0x40, 0x80)
+      callvalue
+      dup1
+      iszero
+      tag_1
+      jumpi
+      revert(0x00, 0x00)
+    tag_1:
+      pop
+      jumpi(tag_2, lt(calldatasize, 0x04))
+      shr(0xe0, calldataload(0x00))
+      dup1
+      0xef5fb05b
+      eq
+      tag_3
+      jumpi
+    tag_2:
+      revert(0x00, 0x00)
+        /* "test.sol":87:199  function sayHello() public pure returns (string memory) {... */
+    tag_3:
+      tag_4
+      tag_5
+      jump	// in
+    tag_4:
+      mload(0x40)
+      tag_6
+      swap2
+      swap1
+      tag_7
+      jump	// in
+    tag_6:
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+    tag_5:
+        /* "test.sol":128:141  string memory */
+      0x60
+        /* "test.sol":154:191  return "Hello from the SmartContract" */
+      mload(0x40)
+      dup1
+      0x40
+      add
+      0x40
+      mstore
+      dup1
+      0x1c
+      dup2
+      mstore
+      0x20
+      add
+      0x48656c6c6f2066726f6d2074686520536d617274436f6e747261637400000000
+      dup2
+      mstore
+      pop
+      swap1
+      pop
+        /* "test.sol":87:199  function sayHello() public pure returns (string memory) {... */
+      swap1
+      jump	// out
+        /* "#utility.yul":7:106   */
+    tag_9:
+        /* "#utility.yul":59:65   */
+      0x00
+        /* "#utility.yul":93:98   */
+      dup2
+        /* "#utility.yul":87:99   */
+      mload
+        /* "#utility.yul":77:99   */
+      swap1
+      pop
+        /* "#utility.yul":7:106   */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":112:281   */
+    tag_10:
+        /* "#utility.yul":196:207   */
+      0x00
+        /* "#utility.yul":230:236   */
+      dup3
+        /* "#utility.yul":225:228   */
+      dup3
+        /* "#utility.yul":218:237   */
+      mstore
+        /* "#utility.yul":270:274   */
+      0x20
+        /* "#utility.yul":265:268   */
+      dup3
+        /* "#utility.yul":261:275   */
+      add
+        /* "#utility.yul":246:275   */
+      swap1
+      pop
+        /* "#utility.yul":112:281   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":287:426   */
+    tag_11:
+        /* "#utility.yul":376:382   */
+      dup3
+        /* "#utility.yul":371:374   */
+      dup2
+        /* "#utility.yul":366:369   */
+      dup4
+        /* "#utility.yul":360:383   */
+      mcopy
+        /* "#utility.yul":417:418   */
+      0x00
+        /* "#utility.yul":408:414   */
+      dup4
+        /* "#utility.yul":403:406   */
+      dup4
+        /* "#utility.yul":399:415   */
+      add
+        /* "#utility.yul":392:419   */
+      mstore
+        /* "#utility.yul":287:426   */
+      pop
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":432:534   */
+    tag_12:
+        /* "#utility.yul":473:479   */
+      0x00
+        /* "#utility.yul":524:526   */
+      0x1f
+        /* "#utility.yul":520:527   */
+      not
+        /* "#utility.yul":515:517   */
+      0x1f
+        /* "#utility.yul":508:513   */
+      dup4
+        /* "#utility.yul":504:518   */
+      add
+        /* "#utility.yul":500:528   */
+      and
+        /* "#utility.yul":490:528   */
+      swap1
+      pop
+        /* "#utility.yul":432:534   */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":540:917   */
+    tag_13:
+        /* "#utility.yul":628:631   */
+      0x00
+        /* "#utility.yul":656:695   */
+      tag_20
+        /* "#utility.yul":689:694   */
+      dup3
+        /* "#utility.yul":656:695   */
+      tag_9
+      jump	// in
+    tag_20:
+        /* "#utility.yul":711:782   */
+      tag_21
+        /* "#utility.yul":775:781   */
+      dup2
+        /* "#utility.yul":770:773   */
+      dup6
+        /* "#utility.yul":711:782   */
+      tag_10
+      jump	// in
+    tag_21:
+        /* "#utility.yul":704:782   */
+      swap4
+      pop
+        /* "#utility.yul":791:856   */
+      tag_22
+        /* "#utility.yul":849:855   */
+      dup2
+        /* "#utility.yul":844:847   */
+      dup6
+        /* "#utility.yul":837:841   */
+      0x20
+        /* "#utility.yul":830:835   */
+      dup7
+        /* "#utility.yul":826:842   */
+      add
+        /* "#utility.yul":791:856   */
+      tag_11
+      jump	// in
+    tag_22:
+        /* "#utility.yul":881:910   */
+      tag_23
+        /* "#utility.yul":903:909   */
+      dup2
+        /* "#utility.yul":881:910   */
+      tag_12
+      jump	// in
+    tag_23:
+        /* "#utility.yul":876:879   */
+      dup5
+        /* "#utility.yul":872:911   */
+      add
+        /* "#utility.yul":865:911   */
+      swap2
+      pop
+        /* "#utility.yul":632:917   */
+      pop
+        /* "#utility.yul":540:917   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":923:1236   */
+    tag_7:
+        /* "#utility.yul":1036:1040   */
+      0x00
+        /* "#utility.yul":1074:1076   */
+      0x20
+        /* "#utility.yul":1063:1072   */
+      dup3
+        /* "#utility.yul":1059:1077   */
+      add
+        /* "#utility.yul":1051:1077   */
+      swap1
+      pop
+        /* "#utility.yul":1123:1132   */
+      dup2
+        /* "#utility.yul":1117:1121   */
+      dup2
+        /* "#utility.yul":1113:1133   */
+      sub
+        /* "#utility.yul":1109:1110   */
+      0x00
+        /* "#utility.yul":1098:1107   */
+      dup4
+        /* "#utility.yul":1094:1111   */
+      add
+        /* "#utility.yul":1087:1134   */
+      mstore
+        /* "#utility.yul":1151:1229   */
+      tag_25
+        /* "#utility.yul":1224:1228   */
+      dup2
+        /* "#utility.yul":1215:1221   */
+      dup5
+        /* "#utility.yul":1151:1229   */
+      tag_13
+      jump	// in
+    tag_25:
+        /* "#utility.yul":1143:1229   */
+      swap1
+      pop
+        /* "#utility.yul":923:1236   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+
+    auxdata: 0xa2646970667358221220cb21773d6f59bbee50f29b59a94a8691871ca4093fbb1757c5f97b550a63b1aa64736f6c634300081c0033
+}
