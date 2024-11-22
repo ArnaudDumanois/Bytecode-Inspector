@@ -2,6 +2,8 @@
 
 Ici nous avons inspecter plusieurs cas possible :
 
+# Use case Simples
+
 - Contrat simple avec une fonction pure qui retourne la chaine de caractere  
 
 La chaine est bien présente dans le bytecode, car elle fait partie des données statiques
@@ -63,6 +65,14 @@ Mais  on retrouve la chaine de caractere dans les 2 bytecodes
 ![alt text](image-8.png)
 
 - Utilisation d'un constructeur pour initialiser la chaine de caractere
+
+Si on inclu la chaîne dans un constructeur pour qu'elle soit immédiatement stockée dans le stockage lors du déploiement, on retrouve la phrase dans le bytecode
+
+![alt text](image-9.png)
+
+## Use Case avancé
+
+Dans la partie précédente nous avons simplement pu observer des comportements assez basique de langages de programmation, cependant Solidity est un langage de programmation qui permet de faire de la programmation orienté objet, nous allons donc voir comment se comporte le bytecode dans des cas plus avancé avec nottament la notion d'héritage.
 
 - Heritage simple avec une fonction héritée  
 - Rédéfinitions de fonction héritée
