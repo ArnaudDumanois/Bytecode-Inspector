@@ -78,6 +78,34 @@ Attention on ne doit pas le confondre avec le dynamic linking qui lui sert a li�
 
 Le dynamic binding est utilisé dans les langages de programmation orienté objet, pour permettre de lier une fonction à un appel de fonction à l'exécution. Cela permet de faire de la programmation orienté objet, et de permettre l'héritage, le polymorphisme, etc.
 
+L'idée, en pseudo code, est d'observer le comportement suivant : 
+```
+Classe Parent {
+    Méthode afficher() {
+        Affiche "Je suis Parent"
+    }
+}
+
+Classe Enfant hérite de Parent {
+    Méthode afficher() {
+        Affiche "Je suis Enfant"
+    }
+}
+
+// Programme principal
+Parent p = nouvel Enfant()
+p.afficher()  // Quelle méthode est appelée ?
+```
+
+et on va s'intéresser a quelle méthode est appelée, et donc qu'est ce qui est affiché.
+Si solidity supporte le dynamic binding, alors la méthode afficher de l'enfant sera appelée, et donc "Je suis Enfant" sera affiché, car l'objet p est certes de type Parent, mais il est en réalité un objet de type Enfant.
+Sinon, c'est la méthode afficher du parent qui sera appelée, et donc "Je suis Parent" sera affiché car il se basera sur le type de l'objet p, et non sur le type réel de l'objet, on parlera de type statique.
+
+On va se serviir du code du fichier /DynamicBinding/test_dynamicBinding.sol pour observer le comportement de Solidity, il s'agit simplement de l'implémentation du pseudo code ci-dessus. Et grace a RemixIDE, on peux voir que lorsqu'on appelle la fonction tester, c'est bien la fonction de l'enfant qui est appelée, et donc "Je suis Enfant" est affiché, ce qui signifie que Solidity supporte le dynamic binding.
+
+![alt text](image-10.png)
+
+
 ## Use Case avancé
 
 Dans la partie précédente nous avons simplement pu observer des comportements assez basique de langages de programmation, cependant Solidity est un langage de programmation qui permet de faire de la programmation orienté objet, nous allons donc voir comment se comporte le bytecode dans des cas plus avancé avec nottament la notion d'héritage.
