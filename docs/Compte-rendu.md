@@ -66,9 +66,17 @@ Mais  on retrouve la chaine de caractere dans les 2 bytecodes
 
 - Utilisation d'un constructeur pour initialiser la chaine de caractere
 
-Si on inclu la chaîne dans un constructeur pour qu'elle soit immédiatement stockée dans le stockage lors du déploiement, on retrouve la phrase dans le bytecode
+Si on inclut la chaîne dans un constructeur pour qu'elle soit immédiatement stockée dans le stockage lors du déploiement, on retrouve la phrase dans le bytecode
 
 ![alt text](image-9.png)
+
+## Pause sur le Dynamic binding
+
+Le dynamic binding est une technique de programmation qui permet de lier une fonction à un appel de fonction à l'exécution. 
+
+Attention on ne doit pas le confondre avec le dynamic linking qui lui sert a lié les libraries.
+
+Le dynamic binding est utilisé dans les langages de programmation orienté objet, pour permettre de lier une fonction à un appel de fonction à l'exécution. Cela permet de faire de la programmation orienté objet, et de permettre l'héritage, le polymorphisme, etc.
 
 ## Use Case avancé
 
